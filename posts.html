@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · sf-t3-1779642675702-013</title>
+  <meta name="description" content="sf-t3-1779642675702-013에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://sf-t3-1779642675702-013.maphoshirts.com/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* CSS RESET & VARIABLES */
+ :root {
+ --bg-color: #ffffff;
+ --text-main: #111111;
+ --text-sub: #666666;
+ --accent: #000000;
+ --border: #e5e5e5;
+ --font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+ }
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ html { font-size: 16px; scroll-behavior: smooth; }
+ body {
+ font-family: var(--font-family);
+ background-color: var(--bg-color);
+ color: var(--text-main);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ }
+ a { text-decoration: none; color: inherit; transition: opacity 0.2s; }
+ a:hover { opacity: 0.6; }
+ ul { list-style: none; }
+ img, svg { max-width: 100%; height: auto; display: block; }
+
+ /* UTILITIES */
+ .container {
+ width: 100%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ .section-divider {
+ height: 1px;
+ background-color: var(--border);
+ margin: 80px 0;
+ }
+ .text-accent { color: var(--accent); font-weight: 700; }
+ .btn {
+ display: inline-block;
+ padding: 14px 28px;
+ font-size: 1rem;
+ font-weight: 600;
+ border: 1px solid var(--text-main);
+ cursor: pointer;
+ transition: all 0.3s ease;
+ }
+ .btn:hover {
+ background-color: var(--text-main);
+ color: var(--bg-color);
+ }
+ .btn-primary {
+ background-color: var(--text-main);
+ color: var(--bg-color);
+ }
+ .btn-primary:hover {
+ background-color: #333;
+ border-color: #333;
+ }
+
+ /* HEADER */
+ header {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ background: rgba(255, 255, 255, 0.95);
+ backdrop-filter: blur(10px);
+ border-bottom: 1px solid var(--border);
+ z-index: 1000;
+ padding: 15px 0;
+ }
+ .nav-wrapper {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .logo {
+ font-size: 1.5rem;
+ font-weight: 900;
+ letter-spacing: -1px;
+ }
+ .desktop-nav ul {
+ display: flex;
+ gap: 30px;
+ }
+ .desktop-nav a {
+ font-size: 0.95rem;
+ font-weight: 500;
+ }
+ .mobile-toggle {
+ display: none;
+ cursor: pointer;
+ flex-direction: column;
+ gap: 5px;
+ }
+ .bar {
+ width: 25px;
+ height: 2px;
+ background-color: var(--text-main);
+ }
+
+ /* HERO SECTION */
+ .hero {
+ padding: 160px 0 100px;
+ text-align: left;
+ }
+ .hero h1 {
+ font-size: clamp(2.5rem, 5vw, 4.5rem);
+ line-height: 1.1;
+ font-weight: 800;
+ letter-spacing: -0.03em;
+ margin-bottom: 24px;
+ }
+ .hero p {
+ font-size: 1.25rem;
+ color: var(--text-sub);
+ max-width: 600px;
+ margin-bottom: 40px;
+ }
+
+ /* CONTENT GRID */
+ .content-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 60px;
+ margin-bottom: 100px;
+ }
+ .card {
+ background: #f9f9f9;
+ padding: 40px;
+ border: 1px solid var(--border);
+ }
+ .card h3 {
+ font-size: 1.5rem;
+ margin-bottom: 16px;
+ }
+ .card p {
+ font-size: 1rem;
+ color: var(--text-sub);
+ margin-bottom: 20px;
+ }
+ .price-tag {
+ font-size: 2rem;
+ font-weight: 700;
+ display: block;
+ margin: 20px 0;
+ }
+
+ /* FAQ SECTION */
+ .faq-section {
+ margin-bottom: 100px;
+ }
+ .faq-item {
+ border-bottom: 1px solid var(--border);
+ padding: 25px 0;
+ }
+ .faq-question {
+ font-size: 1.2rem;
+ font-weight: 600;
+ cursor: pointer;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+ .faq-answer {
+ margin-top: 15px;
+ color: var(--text-sub);
+ display: none; /* Simple toggle logic implied */
+ }
+ .faq-item:hover .faq-answer {
+ display: block;
+ }
+
+ /* FOOTER */
+ footer {
+ background-color: #111;
+ color: #fff;
+ padding: 80px 0 40px;
+ }
+ .footer-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 40px;
+ margin-bottom: 60px;
+ }
+ .footer-links a {
+ display: block;
+ margin-bottom: 10px;
+ color: #999;
+ }
+ .copyright {
+ border-top: 1px solid #333;
+ padding-top: 20px;
+ text-align: center;
+ color: #555;
+ font-size: 0.8rem;
+ }
+
+ /* RESPONSIVE */
+ @media (max-width: 768px) {
+ .desktop-nav { display: none; }
+ .mobile-toggle { display: flex; }
+ .content-grid { grid-template-columns: 1fr; gap: 30px; }
+ .hero { padding-top: 120px; }
+ .footer-grid { grid-template-columns: 1fr; }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · sf-t3-1779642675702-013">
+  <meta property="og:description" content="sf-t3-1779642675702-013에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://sf-t3-1779642675702-013.maphoshirts.com/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header>
+ <div class="container nav-wrapper">
+ <a href="#" class="logo">SEO.PILOT</a>
+ <nav class="desktop-nav">
+ <ul>
+ <li><a href="#">서비스 소개</a></li>
+ <li><a href="#">가격 정책</a></li>
+ <li><a href="#">성과 사례</a></li>
+ <li><a href="#">고객 문의</a></li>
+ </ul>
+ </nav>
+ <div class="mobile-toggle">
+ 
+ 
+ 
+ </div>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 33개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1269.html">SEO 오토파일럿 가격 선택 전에 보는 합정 셔츠룸 단골들이 뽑은 핫플 매거진 체크포인트</a>
+        <p class="post-item__summary">SEO 오토파일럿 가격를 확인할 때 먼저 볼 부분은 화려한 문구가 아니라 실제로 비교 가능한 조건입니다. 마포 주변 정보는 비슷한 표현이 많아서, 어떤 기준으로 읽느냐에 따라 판단의 정확도가 크게 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6730.html">SEO 오토파일럿 가격으로 마포 비즈니스 성장 가속화</a>
+        <p class="post-item__summary">SEO 오토파일럿 가격을 정정하기 전에, 서비스가 실제로 트래픽을 유도할 수 있는지를 먼저 판단해야 한다. 많은 업체가 저가를 외치면서도 결국 검색 노출이 눈에 띄지 않는다. 따라서 인기 키워드와 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6731.html">서버 운영비 부담된다면? SEO 오토파일럿 가격 대비 효율</a>
+        <p class="post-item__summary">서버 웜업이 필요한 사업장이라면 정기적인 SEO 유입이 곧 매출과 직결된다. 특히 마포 지역처럼 경쟁이 적지 않은 상권에서는 검색 노출 빈도가 사업 안정성을 좌우하기도 한다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6732.html">SEO 오토파일럿: 마포에서 빠른 서버 웜업과 자연 검색 가속화</a>
+        <p class="post-item__summary">SEO 오토파일럿은 마포 지역 대표적인 서버 웜업 과정을 간소화합니다. 자동화된 키워드 선정과 구글 서치 결과 피드백이 실시간으로 연결되어, 초기 설정 단계에서도 매출 향상을 금방 볼 수 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6733.html">마포 서버 웜업과 SEO 오토파일럿 가격, 운영 효율을 결정하다</a>
+        <p class="post-item__summary">SEO 오토파일럿 가격은 자동화된 트래픽 유입을 고려할 때 핵심 요소다. 특히 서버 웜업이 필요한 사업장이라면 예산 대비 효과를 꼼꼼히 따져야 한다. 단순한 노출 횟수가 아니라 방문자 품질과 체류 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6734.html">SEO 오토파일럿 가격, 마포 웨이브를 선도하다</a>
+        <p class="post-item__summary">SEO 오토파일럿은 키워드 분석부터 콘텐츠 자동 생성까지 한 번에 해결해 주는 최첨단 도구입니다. 사용자는 월간 구독료를 내고, 매월 자동 최적화 리포트를 받을 수 있습니다. 마포 지역 비즈니스에서</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6735.html">SEO 오토파일럿 가격, 서버 웜업 비용과 어떻게 연결될까</a>
+        <p class="post-item__summary">서버 웜업을 고려하는 운영자라면 SEO 오토파일럿 가격이 가장 궁금한 지점일 것이다. 마포 일대 에이전시들이 도입하는 웜업 솔루션은 서버 응답 시간 단축과 직결되며, 단순한 크롤링 대비를 넘어 사이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6736.html">마포 서버 웜업 시, SEO 오토파일럿 가격은 어떤 의미인가?</a>
+        <p class="post-item__summary">SEO 오토파일럿 가격은 사용자가 설정한 조건과 트래픽 목표에 따라 달라진다. 마포 지역에서의 서버 웜업 단계에서는 초기 비용이 비교적 낮게 책정되는 경우가 많다. 또한, 운영자가 옵션을 추가하면 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6737.html">마포 서버 웜업 업체를 위한 SEO 오토파일럿 가격 선택 기준</a>
+        <p class="post-item__summary">서버 웜업 시장이 확대되면서 마포 지역에서도 SEO 자동화 도입을 검토하는 업체가 늘어나고 있다. 다양한 SEO 오토파일럿 솔루션이 출시되면서 각각의 가격 체계가 달라 선택에 어려움을 겪는 경우가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6738.html">SEO 오토파일럿 가격, 마포에서 가장 효율적인 선택</a>
+        <p class="post-item__summary">SEO 오토파일럿은 검색 엔진 최적화 작업을 자동화해 주는 도구로, 마포의 중소기업에게 큰 도움이 됩니다. 최근 몇 년 사이에 검색 알고리즘이 복잡해지면서 수작업으로는 대응하기 어려워졌습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6739.html">마포 서버 웜업 업체의 SEO 오토파일럿 가격 이렇게 책정된다</a>
+        <p class="post-item__summary">서버 웜업 운영을 맡기려는 마포 지역 사업장이라면 SEO 오토파일럿 가격이 가장 궁금할 것이다. 정해진 요금표가 있는 듯 보여도 실제로는 서버 규모와 트래픽 패턴에 따라 견적이 크게 달라진다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6740.html">SEO 오토파일럿 가격, 마포 지역에서 서버 웜업으로 알아보자</a>
+        <p class="post-item__summary">SEO 오토파일럿 가격에 대한 이해가 필수입니다. 이 도구는 검색 엔진 최적화를 자동으로 수행하며, 비용은 서비스 규모와 기능에 따라 달라집니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6741.html">마포 서버 웜업 운영자를 위한 SEO 오토파일럿 가격 선택 가이드</a>
+        <p class="post-item__summary">마포 지역에서 서버 웜업 사업을 운영 중이라면 SEO 오토파일럿 가격이 중요한 고려 사항 중 하나일 것이다. 자동화된 SEO 도구는 반복적인 최적화 작업을 줄여주고 운영 효율을 높여주지만, 도입 비</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6742.html">마포 서버 웜업에 필수, SEO 오토파일럿 가격의 실전 가이드</a>
+        <p class="post-item__summary">마포에서 서버 웜업을 제공할 때, SEO 오토파일럿 가격은 경쟁력 있는 서비스를 만들기 위한 핵심 요소입니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6743.html">서버 웜업 운영자가 알아둘 마포 지역 SEO 오토파일럿 가격</a>
+        <p class="post-item__summary">마포에서 서버 웜업 서비스를 운영하다 보면 꾸준한 트래픽 확보가 가장 큰 과제 중 하나다. SEO 오토파일럿 가격이 최근 업계에서 화제인 이유는 자동화된 SEO 운영으로 이런 부담을 덜어주기 때문이</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260706-6744.html">SEO 오토파일럿 가격이 마포 스타트업에 주는 영향</a>
+        <p class="post-item__summary">최근 기업들은 SEO를 통해 잠재 고객을 끌어들인다. 특히 오토파일럿 가격이 합리적인 도구는 검색 결과에서 빠르게 노출될 수 있도록 돕는다. 이미 많은 마포 지역 스타트업이 이 경로를 선택하고 있다</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0353.html">SEO 오토파일럿 가격 비교와 도메인 지수 탈모 방지 및 앵커 텍스트 이식 가이드 전략</a>
+        <p class="post-item__summary">웹사이트 성장을 위해 자동화 솔루션을 고려할 때 가장 먼저 마주하는 고민은 과연 SEO 오토파일럿 가격 정책이 합리적인가 하는 점입니다. 단순히 비용만 지불한다고 해서 결과가 바로 나오지 않기 때문</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0354.html">SEO 오토파일럿 가격 분석 및 마포 셔츠룸 리얼 후기 소셜 마케팅 가이드 활용법</a>
+        <p class="post-item__summary">많은 이들이 자동화 도구에 대해 막연히 높은 효율을 기대하며 SEO 오토파일럿 가격 정보를 찾아 헤맵니다. 하지만 단순히 도구에 의존하는 것이 성과의 전부라는 생각은 큰 오해이며, 마케팅의 본질은 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0485.html">SEO 오토파일럿 가격 비교보다 중요한 마곡 유흥 추천정보 확인법</a>
+        <p class="post-item__summary">온라인에서 특정 서비스를 검색할 때 SEO 오토파일럿 가격 같은 효율성을 따지는 것처럼, 마곡 지역의 유흥 업소를 찾을 때도 체계적인 검증 절차가 필요합니다. 단순히 광고성 문구에 의존하기보다는 실</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0486.html">SEO 오토파일럿 가격 기준만큼 신중한 합정 노래방 추천정보 선택</a>
+        <p class="post-item__summary">효율적인 시스템을 구축하기 위해 SEO 오토파일럿 가격 요소를 분석하는 것과 마찬가지로, 합정에서 쾌적한 노래방을 찾을 때도 기준이 명확해야 합니다. 보통 가성비를 중시하는 실속형 선택지와 서비스의</p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
